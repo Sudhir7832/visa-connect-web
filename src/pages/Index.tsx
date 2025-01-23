@@ -31,16 +31,16 @@ const Index = () => {
 
   const carouselImages = [
     {
-      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      alt: "Online Services",
+      src: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05",
+      alt: "Airplane flying in sunset",
     },
     {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      alt: "Visa Services",
+      src: "https://images.unsplash.com/photo-1507812984078-917a274065be",
+      alt: "Airport terminal",
     },
     {
-      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-      alt: "Team Support",
+      src: "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e",
+      alt: "Airplane wing view",
     },
   ];
 
