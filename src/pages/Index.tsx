@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Globe, FileCheck, Clock } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Index = () => {
   const services = [
@@ -22,6 +29,21 @@ const Index = () => {
     },
   ];
 
+  const carouselImages = [
+    {
+      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      alt: "Online Services",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      alt: "Visa Services",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      alt: "Team Support",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -38,13 +60,34 @@ const Index = () => {
             </p>
             <Link
               to="/contact"
-              className="bg-secondary hover:bg-secondary-hover text-white px-8 py-3 rounded-md inline-flex items-center group"
+              className="bg-[#F97316] hover:bg-[#FB923C] text-white px-8 py-3 rounded-md inline-flex items-center group"
             >
               Get Started
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Carousel Section */}
+      <div className="container mx-auto px-6 py-16">
+        <Carousel className="w-full max-w-5xl mx-auto">
+          <CarouselContent>
+            {carouselImages.map((image, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-[400px] object-cover rounded-lg"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
 
       {/* Services Section */}
@@ -71,7 +114,7 @@ const Index = () => {
           <p className="text-xl mb-8">Contact us today for a consultation</p>
           <Link
             to="/contact"
-            className="bg-secondary hover:bg-secondary-hover text-white px-8 py-3 rounded-md inline-flex items-center group"
+            className="bg-[#0EA5E9] hover:bg-[#38BDF8] text-white px-8 py-3 rounded-md inline-flex items-center group"
           >
             Contact Us
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
