@@ -5,6 +5,9 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
+// Initialize EmailJS
+emailjs.init("YOUR_PUBLIC_KEY");
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,20 +23,21 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY"
       );
 
       toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
+      console.error("EmailJS Error:", error);
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
