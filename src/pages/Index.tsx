@@ -48,14 +48,20 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <div className="bg-primary text-white py-20">
+      {/* Hero Section with Background Image */}
+      <div 
+        className="relative bg-cover bg-center py-20"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${carouselImages[0].src})`,
+          backgroundAttachment: "fixed"
+        }}
+      >
         <div className="container mx-auto px-6">
           <div className="max-w-3xl animate-fade-up">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
               Professional Visa & Immigration Services
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 text-white drop-shadow-lg">
               Expert guidance for all your visa and immigration needs
             </p>
             <Link
