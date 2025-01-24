@@ -32,26 +32,26 @@ const About = () => {
             throughout your visa application process.
           </p>
 
-          {/* Values */}
+          {/* Values with distinct background colors */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
-            <div className="text-center">
-              <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
+            <div className="text-center p-6 rounded-lg bg-[#8B5CF6] text-white shadow-lg transform hover:scale-105 transition-transform">
+              <Users className="w-12 h-12 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-100">
                 Dedicated professionals with years of experience
               </p>
             </div>
-            <div className="text-center">
-              <Target className="w-12 h-12 text-secondary mx-auto mb-4" />
+            <div className="text-center p-6 rounded-lg bg-[#D946EF] text-white shadow-lg transform hover:scale-105 transition-transform">
+              <Target className="w-12 h-12 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-100">
                 Simplifying the visa application process
               </p>
             </div>
-            <div className="text-center">
-              <Award className="w-12 h-12 text-secondary mx-auto mb-4" />
+            <div className="text-center p-6 rounded-lg bg-[#0EA5E9] text-white shadow-lg transform hover:scale-105 transition-transform">
+              <Award className="w-12 h-12 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Quality Service</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-100">
                 Committed to excellence and client satisfaction
               </p>
             </div>

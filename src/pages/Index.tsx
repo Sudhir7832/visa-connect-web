@@ -29,7 +29,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section with Background Image */}
+      {/* Hero Section */}
       <div 
         className="relative bg-cover bg-center py-20"
         style={{
@@ -83,9 +83,17 @@ const Index = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="bg-primary text-white py-16">
-        <div className="container mx-auto px-6 text-center">
+      {/* CTA Section with country flags background */}
+      <div 
+        className="relative text-white py-16"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: "fixed"
+        }}
+      >
+        <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl mb-8">Contact us today for a consultation</p>
           <Link
