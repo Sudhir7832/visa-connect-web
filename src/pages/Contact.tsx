@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
-// Initialize EmailJS
+// Initialize EmailJS with your public key
 emailjs.init("cTkSrSkJZ6EK0ZCP5");
 
 const Contact = () => {
@@ -22,15 +22,18 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: "Admin", // Add recipient name
+      };
+
       await emailjs.send(
         "service_ehocd9k",
         "template_ycwqbqn",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
+        templateParams,
         "cTkSrSkJZ6EK0ZCP5"
       );
 
