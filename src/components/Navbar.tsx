@@ -17,7 +17,7 @@ const Navbar = () => {
               alt="VisaServices Logo"
               className="w-10 h-10 rounded"
             />
-            <span className="text-2xl font-bold text-white">VisaServices</span>
+            <span className="text-2xl font-bold text-white">Visa & Online Service</span>
           </Link>
           <div className="flex space-x-8">
             <Link
