@@ -32,7 +32,7 @@ const Contact = () => {
 
       await emailjs.send(
         "service_ehocd9k",
-        "template_ycwqbqn",
+        "template_eklsn1p",
         templateParams,
         "cTkSrSkJZ6EK0ZCP5"
       );
