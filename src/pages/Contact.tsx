@@ -59,10 +59,16 @@ const Contact = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="bg-primary text-white py-16">
-        <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl">Get in touch with our team</p>
+      <div 
+        className="bg-cover bg-center py-16 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05)`,
+          backgroundAttachment: "fixed"
+        }}
+      >
+        <div className="container mx-auto px-6 relative z-10">
+          <h1 className="text-4xl font-bold mb-4 text-white">Contact Us</h1>
+          <p className="text-xl text-white">Get in touch with our team</p>
         </div>
       </div>
 

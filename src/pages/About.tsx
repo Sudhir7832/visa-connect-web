@@ -8,10 +8,16 @@ const About = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="bg-primary text-white py-16">
-        <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold mb-4">About Us</h1>
-          <p className="text-xl">Your trusted partner in visa and immigration services</p>
+      <div 
+        className="bg-cover bg-center py-16 relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1469474968028-56623f02e42e)`,
+          backgroundAttachment: "fixed"
+        }}
+      >
+        <div className="container mx-auto px-6 relative z-10">
+          <h1 className="text-4xl font-bold mb-4 text-white">About Us</h1>
+          <p className="text-xl text-white">Your trusted partner in visa and immigration services</p>
         </div>
       </div>
 

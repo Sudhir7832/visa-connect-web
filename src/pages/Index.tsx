@@ -2,13 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Globe, FileCheck, Clock } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 const Index = () => {
   const services = [
@@ -16,31 +9,19 @@ const Index = () => {
       icon: <Globe className="w-12 h-12 text-secondary" />,
       title: "Visa Applications",
       description: "Expert assistance with visa applications for any country",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
     },
     {
       icon: <FileCheck className="w-12 h-12 text-secondary" />,
       title: "Document Verification",
       description: "Professional verification of all required documents",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
     },
     {
       icon: <Clock className="w-12 h-12 text-secondary" />,
       title: "Fast Processing",
       description: "Quick and efficient processing of your applications",
-    },
-  ];
-
-  const carouselImages = [
-    {
-      src: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05",
-      alt: "Airplane flying in sunset",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1507812984078-917a274065be",
-      alt: "Airport terminal",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e",
-      alt: "Airplane wing view",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
     },
   ];
 
@@ -52,7 +33,7 @@ const Index = () => {
       <div 
         className="relative bg-cover bg-center py-20"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${carouselImages[0].src})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1501854140801-50d01698950b)`,
           backgroundAttachment: "fixed"
         }}
       >
@@ -75,27 +56,6 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Carousel Section */}
-      <div className="container mx-auto px-6 py-16">
-        <Carousel className="w-full max-w-5xl mx-auto">
-          <CarouselContent>
-            {carouselImages.map((image, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-[400px] object-cover rounded-lg"
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-
       {/* Services Section */}
       <div className="container mx-auto px-6 py-20">
         <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
@@ -103,11 +63,21 @@ const Index = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow group"
             >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <div className="absolute inset-0">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
+              </div>
+              <div className="relative p-8 text-white">
+                <div className="mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-200">{service.description}</p>
+              </div>
             </div>
           ))}
         </div>
