@@ -33,7 +33,7 @@ const Index = () => {
       <div 
         className="relative bg-cover bg-center py-20"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1501854140801-50d01698950b)`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05)`,
           backgroundAttachment: "fixed"
         }}
       >
