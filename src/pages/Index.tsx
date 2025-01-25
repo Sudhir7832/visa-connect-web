@@ -61,7 +61,7 @@ const Index = () => {
               Professional Visa & Passport Services
             </h1>
             <p className="text-xl mb-8 text-white drop-shadow-lg">
-              Expert guidance for all your visa and immigration needs
+              Expert guidance for all your visa and passport needs
             </p>
             <Link
               to="/contact"
