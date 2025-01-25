@@ -83,7 +83,7 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-secondary mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-gray-600">Visa@vaoservices.i</p>
+                  <p className="text-gray-600">Visa@vaoservices.in</p>
                 </div>
               </div>
               <div className="flex items-start">
