@@ -27,7 +27,7 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_name: "Admin", // Add recipient name
+        to_name: "Admin",
       };
 
       await emailjs.send(
@@ -79,28 +79,28 @@ const Contact = () => {
           <div>
             <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
             <div className="space-y-6">
-              <div className="flex items-start">
-                <Mail className="w-6 h-6 text-secondary mr-4 mt-1" />
+              <div className="flex items-start p-6 rounded-lg bg-[#D3E4FD] transition-all hover:shadow-lg">
+                <Mail className="w-6 h-6 text-blue-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
                   <p className="text-gray-600">Visa@vaoservices.in</p>
                 </div>
               </div>
-              <div className="flex items-start">
-                <Phone className="w-6 h-6 text-secondary mr-4 mt-1" />
+              <div className="flex items-start p-6 rounded-lg bg-[#E5DEFF] transition-all hover:shadow-lg">
+                <Phone className="w-6 h-6 text-purple-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-gray-600">0111 7401177</p>
                 </div>
               </div>
-              <div className="flex items-start">
-                <MapPin className="w-6 h-6 text-secondary mr-4 mt-1" />
+              <div className="flex items-start p-6 rounded-lg bg-[#F2FCE2] transition-all hover:shadow-lg">
+                <MapPin className="w-6 h-6 text-green-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Address</h3>
                   <p className="text-gray-600">
                     146 1st floor Somdutt Chamber 2, 9 
                     <br />
-                    Bhikaji cama place New Delhi 110066
+                    Bhikaji cama place New Delhi 110066
                   </p>
                 </div>
               </div>
