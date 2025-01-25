@@ -83,14 +83,14 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-secondary mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-gray-600">info@visaservices.com</p>
+                  <p className="text-gray-600">Visa@vaoservices.i</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="w-6 h-6 text-secondary mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">0111 7401177</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -98,9 +98,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-1">Address</h3>
                   <p className="text-gray-600">
-                    123 Business Ave, Suite 100
+                    146 1st floor Somdutt Chamber 2, 9 
                     <br />
-                    City, State 12345
+                    Bhikaji cama place New Delhi 110066
                   </p>
                 </div>
               </div>
