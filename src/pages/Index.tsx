@@ -1,27 +1,45 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Globe, FileCheck, Clock } from "lucide-react";
+import { ArrowRight, Passport, FileCheck, Shield, Plane, Building2, FileSignature } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Index = () => {
   const services = [
     {
-      icon: <Globe className="w-12 h-12 text-secondary" />,
-      title: "Visa Applications",
-      description: "Expert assistance with visa applications for any country",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-    },
-    {
       icon: <FileCheck className="w-12 h-12 text-secondary" />,
-      title: "Document Verification",
-      description: "Professional verification of all required documents",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+      title: "Visa Consultation",
+      description: "Professional guidance for all types of visa applications",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173"
     },
     {
-      icon: <Clock className="w-12 h-12 text-secondary" />,
-      title: "Fast Processing",
-      description: "Quick and efficient processing of your applications",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+      icon: <Passport className="w-12 h-12 text-secondary" />,
+      title: "Passport Services",
+      description: "Assistance with passport applications and renewals",
+      image: "https://images.unsplash.com/photo-1544642899-f0d6e5f6ed6f"
+    },
+    {
+      icon: <Shield className="w-12 h-12 text-secondary" />,
+      title: "Travel Insurance",
+      description: "Comprehensive travel insurance coverage solutions",
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85"
+    },
+    {
+      icon: <Plane className="w-12 h-12 text-secondary" />,
+      title: "Ticket Booking",
+      description: "Flight reservations and ticket booking services",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+    },
+    {
+      icon: <Building2 className="w-12 h-12 text-secondary" />,
+      title: "Hotel Booking",
+      description: "Worldwide hotel and accommodation reservations",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945"
+    },
+    {
+      icon: <FileSignature className="w-12 h-12 text-secondary" />,
+      title: "Documents Attestation",
+      description: "Professional document attestation services",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c"
     },
   ];
 
@@ -59,7 +77,7 @@ const Index = () => {
       {/* Services Section */}
       <div className="container mx-auto px-6 py-20">
         <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -83,7 +101,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* CTA Section with country flags background */}
+      {/* CTA Section */}
       <div 
         className="relative text-white py-16"
         style={{
