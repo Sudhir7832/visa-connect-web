@@ -1,4 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Navbar = () => {
   const location = useLocation();
@@ -6,6 +13,41 @@ const Navbar = () => {
   const isActive = (path: string) => {
     return location.pathname === path;
   };
+
+  const NavLinks = () => (
+    <>
+      <Link
+        to="/"
+        className={`${
+          isActive("/")
+            ? "text-[#F97316] font-semibold"
+            : "text-white hover:text-[#F97316]"
+        } transition-colors duration-200`}
+      >
+        Home
+      </Link>
+      <Link
+        to="/about"
+        className={`${
+          isActive("/about")
+            ? "text-[#F97316] font-semibold"
+            : "text-white hover:text-[#F97316]"
+        } transition-colors duration-200`}
+      >
+        About
+      </Link>
+      <Link
+        to="/contact"
+        className={`${
+          isActive("/contact")
+            ? "text-[#F97316] font-semibold"
+            : "text-white hover:text-[#F97316]"
+        } transition-colors duration-200`}
+      >
+        Contact
+      </Link>
+    </>
+  );
 
   return (
     <nav className="bg-[#1A1F2C] shadow-md">
@@ -19,37 +61,26 @@ const Navbar = () => {
             />
             <span className="text-2xl font-bold text-white">Visa & Online Service</span>
           </Link>
-          <div className="flex space-x-8">
-            <Link
-              to="/"
-              className={`${
-                isActive("/")
-                  ? "text-[#F97316] font-semibold"
-                  : "text-white hover:text-[#F97316]"
-              } transition-colors duration-200`}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className={`${
-                isActive("/about")
-                  ? "text-[#F97316] font-semibold"
-                  : "text-white hover:text-[#F97316]"
-              } transition-colors duration-200`}
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className={`${
-                isActive("/contact")
-                  ? "text-[#F97316] font-semibold"
-                  : "text-white hover:text-[#F97316]"
-              } transition-colors duration-200`}
-            >
-              Contact
-            </Link>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            <NavLinks />
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-white">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="bg-[#1A1F2C] border-l-[#2A2F3C]">
+                <div className="flex flex-col space-y-6 mt-6">
+                  <NavLinks />
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
