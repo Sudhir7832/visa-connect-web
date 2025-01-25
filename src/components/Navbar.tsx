@@ -59,7 +59,7 @@ const Navbar = () => {
               alt="V&O Services Logo"
               className="w-12 h-12"
             />
-            <span className="text-2xl font-bold text-white">V&O Services</span>
+            <span className="text-2xl font-bold text-white">Visa & Online Services</span>
           </Link>
           
           {/* Desktop Navigation */}
