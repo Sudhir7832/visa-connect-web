@@ -55,9 +55,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="https://placehold.co/40x40"
-              alt="VisaServices Logo"
-              className="w-10 h-10 rounded"
+              src="/lovable-uploads/f0103f9e-42d3-4e85-9041-dddbf0c91050.png"
+              alt="V&O Services Logo"
+              className="w-12 h-12"
             />
             <span className="text-2xl font-bold text-white">V&O Services</span>
           </Link>
