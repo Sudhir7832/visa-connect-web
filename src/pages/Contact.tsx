@@ -83,7 +83,7 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-blue-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-gray-600">Visa@vaoservices.in</p>
+                  <p className="text-gray-600">Visa@vaoservices.in | Amit@vaoservices.in</p>
                 </div>
               </div>
               <div className="flex items-start p-6 rounded-lg bg-[#E5DEFF] transition-all hover:shadow-lg">
