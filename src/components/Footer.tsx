@@ -22,7 +22,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="text-gray-300 space-y-2">
-              <p>Email: info@visaservices.com</p>
+              <p>Email: Visa@vaoservices | Amit@vaoservices.in.in</p>
               <p>Phone: +1 (555) 123-4567</p>
               <p>Address: 123 Business Ave, Suite 100</p>
             </div>
