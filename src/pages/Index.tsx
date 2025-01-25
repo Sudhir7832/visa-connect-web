@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Passport, FileCheck, Shield, Plane, Building2, FileSignature } from "lucide-react";
+import { ArrowRight, BookOpen, FileCheck, Shield, Plane, Building2, FileSignature } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -12,7 +12,7 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173"
     },
     {
-      icon: <Passport className="w-12 h-12 text-secondary" />,
+      icon: <BookOpen className="w-12 h-12 text-secondary" />,
       title: "Passport Services",
       description: "Assistance with passport applications and renewals",
       image: "https://images.unsplash.com/photo-1544642899-f0d6e5f6ed6f"
