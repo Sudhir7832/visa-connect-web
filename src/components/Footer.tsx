@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">VisaServices</h3>
+            <h3 className="text-xl font-semibold mb-4">V&O Services</h3>
             <p className="text-gray-300">
-              Professional visa and immigration services for a seamless experience.
+              Professional visa and passport services for a seamless experience.
             </p>
           </div>
           <div>
