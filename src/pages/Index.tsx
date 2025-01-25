@@ -58,7 +58,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl animate-fade-up">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
-              Professional Visa & Immigration Services
+              Professional Visa & Passport Services
             </h1>
             <p className="text-xl mb-8 text-white drop-shadow-lg">
               Expert guidance for all your visa and immigration needs
