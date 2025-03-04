@@ -1,19 +1,25 @@
 
-import React, { useState } from "react";
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PaymentForm from "../components/PaymentForm";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 
-// Replace with your Stripe publishable key
-// In a production app, you should use an environment variable
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
-
 const Payment = () => {
-  const [selectedAmount, setSelectedAmount] = useState(10000); // $100.00 in cents
+  const [selectedAmount, setSelectedAmount] = useState(10000); // ₹100.00 in paisa
+  
+  useEffect(() => {
+    // Load Razorpay script
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   
   const handleAmountChange = (value: string) => {
     setSelectedAmount(parseInt(value));
@@ -53,31 +59,29 @@ const Payment = () => {
             >
               <div className="flex items-center space-x-2 border p-4 rounded-md hover:bg-gray-50 cursor-pointer">
                 <RadioGroupItem value="5000" id="amount-1" />
-                <Label htmlFor="amount-1" className="flex-grow cursor-pointer">$50.00</Label>
+                <Label htmlFor="amount-1" className="flex-grow cursor-pointer">₹50.00</Label>
               </div>
               <div className="flex items-center space-x-2 border p-4 rounded-md hover:bg-gray-50 cursor-pointer">
                 <RadioGroupItem value="10000" id="amount-2" />
-                <Label htmlFor="amount-2" className="flex-grow cursor-pointer">$100.00</Label>
+                <Label htmlFor="amount-2" className="flex-grow cursor-pointer">₹100.00</Label>
               </div>
               <div className="flex items-center space-x-2 border p-4 rounded-md hover:bg-gray-50 cursor-pointer">
                 <RadioGroupItem value="25000" id="amount-3" />
-                <Label htmlFor="amount-3" className="flex-grow cursor-pointer">$250.00</Label>
+                <Label htmlFor="amount-3" className="flex-grow cursor-pointer">₹250.00</Label>
               </div>
             </RadioGroup>
           </div>
 
           <div className="bg-gray-50 p-6 rounded-lg mb-8">
             <h3 className="text-lg font-medium mb-4">Payment Information</h3>
-            <Elements stripe={stripePromise}>
-              <PaymentForm 
-                amount={selectedAmount} 
-                onSuccess={handlePaymentSuccess} 
-              />
-            </Elements>
+            <PaymentForm 
+              amount={selectedAmount} 
+              onSuccess={handlePaymentSuccess} 
+            />
           </div>
           
           <div className="text-sm text-gray-500 mt-8">
-            <p>* This is a secure payment processed by Stripe. Your card information is never stored on our servers.</p>
+            <p>* This is a secure payment processed by Razorpay. Your payment information is handled securely.</p>
             <p>* For any payment issues, please contact our support team.</p>
           </div>
         </div>

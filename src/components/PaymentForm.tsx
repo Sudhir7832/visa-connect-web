@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -9,95 +8,94 @@ interface PaymentFormProps {
   onSuccess?: () => void;
 }
 
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
+
 const PaymentForm = ({ amount, onSuccess }: PaymentFormProps) => {
-  const stripe = useStripe();
-  const elements = useElements();
   const [isProcessing, setIsProcessing] = useState(false);
   const [paymentError, setPaymentError] = useState<string | null>(null);
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-
-    if (!stripe || !elements) {
-      // Stripe.js has not loaded yet
-      return;
-    }
-
+  const handlePayment = async () => {
     setIsProcessing(true);
     setPaymentError(null);
 
-    // In a real implementation, you would create a payment intent on your server
-    // and return the client secret to the frontend
+    // In a real implementation, you would create an order on your server
+    // and return the order_id to the frontend
     
-    // For demo purposes, we'll just simulate a payment success
-    setTimeout(() => {
-      setIsProcessing(false);
-      toast.success("Payment processed successfully!");
-      if (onSuccess) onSuccess();
-    }, 2000);
+    // Razorpay options
+    const options = {
+      key: "rzp_test_YourTestKey", // Replace with your actual Razorpay key
+      amount: amount, // Amount in smallest currency unit (paisa for INR)
+      currency: "INR",
+      name: "Visa & Online Services",
+      description: "Payment for Visa Services",
+      image: "/lovable-uploads/f0103f9e-42d3-4e85-9041-dddbf0c91050.png",
+      prefill: {
+        name: "",
+        email: "",
+        contact: ""
+      },
+      theme: {
+        color: "#F97316"
+      },
+      handler: function(response: any) {
+        // This function will be called when payment is successful
+        console.log(response);
+        setIsProcessing(false);
+        toast.success("Payment processed successfully!");
+        if (onSuccess) onSuccess();
+      },
+      modal: {
+        ondismiss: function() {
+          setIsProcessing(false);
+          console.log("Payment modal closed");
+        }
+      },
+      notes: {
+        address: "Visa & Online Services Office"
+      }
+    };
 
-    // In a real implementation, you would use the following code:
-    /*
-    const cardElement = elements.getElement(CardElement);
-    
-    if (!cardElement) {
+    try {
+      const razorpay = new window.Razorpay(options);
+      razorpay.open();
+    } catch (error) {
+      console.error("Razorpay Error:", error);
+      setPaymentError("Failed to initialize payment. Please try again.");
       setIsProcessing(false);
-      return;
     }
-
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
-      card: cardElement,
-    });
-
-    if (error) {
-      setPaymentError(error.message || "An error occurred");
-      setIsProcessing(false);
-      return;
-    }
-
-    // Send paymentMethod.id to your server for processing
-    // ...
-    */
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
-      <div className="p-4 border rounded-md bg-white">
-        <CardElement 
-          options={{
-            style: {
-              base: {
-                fontSize: '16px',
-                color: '#424770',
-                '::placeholder': {
-                  color: '#aab7c4',
-                },
-              },
-              invalid: {
-                color: '#9e2146',
-              },
-            },
-          }}
-        />
-      </div>
-      
+    <div className="space-y-6 max-w-md mx-auto">
       {paymentError && (
         <div className="text-red-500 text-sm">{paymentError}</div>
       )}
       
       <div className="text-lg font-medium">
-        Amount to pay: ${(amount / 100).toFixed(2)}
+        Amount to pay: ₹{(amount / 100).toFixed(2)}
       </div>
       
       <Button 
-        type="submit" 
+        onClick={handlePayment}
         className="w-full bg-[#F97316] hover:bg-[#FB923C]"
-        disabled={!stripe || isProcessing}
+        disabled={isProcessing}
       >
         {isProcessing ? "Processing..." : "Pay Now"}
       </Button>
-    </form>
+      
+      <div className="flex items-center justify-center mt-4">
+        <img 
+          src="https://razorpay.com/assets/razorpay-glyph.svg" 
+          alt="Razorpay" 
+          className="h-6 mr-2" 
+        />
+        <span className="text-sm text-gray-500">Secured by Razorpay</span>
+      </div>
+    </div>
   );
 };
 
