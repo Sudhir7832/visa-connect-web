@@ -1,5 +1,6 @@
+
 import { Link, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -78,6 +79,18 @@ const Navbar = () => {
               <SheetContent className="bg-[#1A1F2C] border-l-[#2A2F3C]">
                 <div className="flex flex-col space-y-6 mt-6">
                   <NavLinks />
+                  {/* Payment button in hamburger menu */}
+                  <Link
+                    to="/payment"
+                    className={`${
+                      isActive("/payment")
+                        ? "text-[#F97316] font-semibold"
+                        : "text-white hover:text-[#F97316]"
+                    } transition-colors duration-200 flex items-center gap-2`}
+                  >
+                    <CreditCard className="h-5 w-5" />
+                    Make Payment
+                  </Link>
                 </div>
               </SheetContent>
             </Sheet>
