@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -64,12 +63,12 @@ const About = () => {
             </div>
           </div>
 
-          {/* Why Choose Us - Enhanced Section */}
+          {/* Why Choose Us - Enhanced Section with Logical Colors */}
           <h2 className="text-3xl font-bold mb-8">Why Choose Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-600">
             <div className="flex items-start space-x-3">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <ShieldCheck className="w-5 h-5 text-primary" />
+              <div className="bg-[#0EA5E9]/10 p-2 rounded-full">
+                <ShieldCheck className="w-5 h-5 text-[#0EA5E9]" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Expert Guidance</h3>
@@ -78,8 +77,8 @@ const About = () => {
             </div>
             
             <div className="flex items-start space-x-3">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <HeartHandshake className="w-5 h-5 text-primary" />
+              <div className="bg-[#F97316]/10 p-2 rounded-full">
+                <HeartHandshake className="w-5 h-5 text-[#F97316]" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Personalized Service</h3>
@@ -88,8 +87,8 @@ const About = () => {
             </div>
             
             <div className="flex items-start space-x-3">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <Check className="w-5 h-5 text-primary" />
+              <div className="bg-[#8B5CF6]/10 p-2 rounded-full">
+                <Check className="w-5 h-5 text-[#8B5CF6]" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg">High Success Rate</h3>
@@ -98,8 +97,8 @@ const About = () => {
             </div>
             
             <div className="flex items-start space-x-3">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <Clock className="w-5 h-5 text-primary" />
+              <div className="bg-[#D946EF]/10 p-2 rounded-full">
+                <Clock className="w-5 h-5 text-[#D946EF]" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Time-Efficient Processing</h3>
@@ -108,8 +107,8 @@ const About = () => {
             </div>
             
             <div className="flex items-start space-x-3">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <Globe className="w-5 h-5 text-primary" />
+              <div className="bg-[#0EA5E9]/10 p-2 rounded-full">
+                <Globe className="w-5 h-5 text-[#0EA5E9]" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Global Expertise</h3>
@@ -118,8 +117,8 @@ const About = () => {
             </div>
             
             <div className="flex items-start space-x-3">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <Users className="w-5 h-5 text-primary" />
+              <div className="bg-[#F97316]/10 p-2 rounded-full">
+                <Users className="w-5 h-5 text-[#F97316]" />
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Transparent Communication</h3>
