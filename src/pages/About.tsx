@@ -31,7 +31,7 @@ const About = () => {
            company is a sole proprietorship based in New Delhi. We aim to simplify the often complex visa 
            process, offering our clients personalized, professional assistance to secure travel documentation 
            and fulfill their international travel needs with ease.
-
+            <br>
            With a highly skilled team of experts, we ensure timely and accurate processing, tailored to the 
            specific requirements of each client. At Visa & Online Services, our mission is to provide 
            seamless visa solutions while upholding the highest standards of customer service and integrity.
