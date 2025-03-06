@@ -33,7 +33,7 @@ const About = () => {
            and fulfill their international travel needs with ease.
             <br>
            With a highly skilled team of experts, we ensure timely and accurate processing, tailored to the 
-           specific requirements of each client. At <i> Visa & Online Services </i>>, our mission is to provide 
+           specific requirements of each client. At <i> Visa & Online Services </i>, our mission is to provide 
            seamless visa solutions while upholding the highest standards of customer service and integrity.
           </p>
 
