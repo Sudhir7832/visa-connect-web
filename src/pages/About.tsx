@@ -26,7 +26,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Our Story</h2>
           <p className="text-gray-600 mb-8">
-           Visa & Online Services is a dynamic and customer-focused visa consultancy firm that specializes
+           <i>Visa & Online Services <i> is a dynamic and customer-focused visa consultancy firm that specializes
            in providing efficient and reliable visa-related services. Established in January 2024, our 
            company is a sole proprietorship based in New Delhi. We aim to simplify the often complex visa 
            process, offering our clients personalized, professional assistance to secure travel documentation 
