@@ -2,7 +2,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Users, Target, Award } from "lucide-react";
+import { Users, Target, Award, Check, Clock, Globe, ShieldCheck, HeartHandshake } from "lucide-react";
 
 const About = () => {
   return (
@@ -64,26 +64,69 @@ const About = () => {
             </div>
           </div>
 
-          {/* Why Choose Us */}
+          {/* Why Choose Us - Enhanced Section */}
           <h2 className="text-3xl font-bold mb-8">Why Choose Us</h2>
-          <ul className="space-y-4 text-gray-600">
-            <li className="flex items-start">
-              <span className="text-secondary mr-2">•</span>
-              Professional guidance throughout the visa application process
-            </li>
-            <li className="flex items-start">
-              <span className="text-secondary mr-2">•</span>
-              Personalized service tailored to your specific needs
-            </li>
-            <li className="flex items-start">
-              <span className="text-secondary mr-2">•</span>
-              High success rate in visa approvals
-            </li>
-            <li className="flex items-start">
-              <span className="text-secondary mr-2">•</span>
-              Transparent communication and regular updates
-            </li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-600">
+            <div className="flex items-start space-x-3">
+              <div className="bg-primary/10 p-2 rounded-full">
+                <ShieldCheck className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Expert Guidance</h3>
+                <p>Professional consultation throughout the visa application process with detailed documentation support.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-3">
+              <div className="bg-primary/10 p-2 rounded-full">
+                <HeartHandshake className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Personalized Service</h3>
+                <p>Custom-tailored solutions based on your specific travel needs, visa type, and destination requirements.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-3">
+              <div className="bg-primary/10 p-2 rounded-full">
+                <Check className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">High Success Rate</h3>
+                <p>Proven track record with excellent approval rates for various visa categories and countries.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-3">
+              <div className="bg-primary/10 p-2 rounded-full">
+                <Clock className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Time-Efficient Processing</h3>
+                <p>Streamlined procedures that save you time and minimize delays in your visa application.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-3">
+              <div className="bg-primary/10 p-2 rounded-full">
+                <Globe className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Global Expertise</h3>
+                <p>Extensive knowledge of immigration policies and visa requirements for countries worldwide.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-3">
+              <div className="bg-primary/10 p-2 rounded-full">
+                <Users className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Transparent Communication</h3>
+                <p>Clear updates on your application status and honest guidance throughout the process.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
