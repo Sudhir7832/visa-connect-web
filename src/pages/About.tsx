@@ -112,7 +112,7 @@ const About = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Global Expertise</h3>
-                <p>Extensive knowledge of immigration policies and visa requirements for countries worldwide.</p>
+                <p>Extensive knowledge of passport and visa requirements for countries worldwide.</p>
               </div>
             </div>
             
