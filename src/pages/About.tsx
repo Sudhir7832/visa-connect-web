@@ -17,7 +17,7 @@ const About = () => {
       >
         <div className="container mx-auto px-6 relative z-10">
           <h1 className="text-4xl font-bold mb-4 text-white">About Us</h1>
-          <p className="text-xl text-white">Your trusted partner in visa and immigration services</p>
+          <p className="text-xl text-white">Your trusted partner in visa and online services</p>
         </div>
       </div>
 
