@@ -1,7 +1,9 @@
+
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, FileCheck, Shield, Plane, Building2, FileSignature } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const Index = () => {
   const services = [
@@ -125,6 +127,9 @@ const Index = () => {
       </div>
 
       <Footer />
+      
+      {/* WhatsApp Button */}
+      <WhatsAppButton phoneNumber="917982333437" />
     </div>
   );
 };
